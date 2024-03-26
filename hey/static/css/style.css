@@ -1,0 +1,268 @@
+
+
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+span {
+    vertical-align: middle;
+    color: #F2F2F2;
+}
+
+body {
+    background-color: #011C26;
+    font-family: sans-serif;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+div {
+    display: block;
+}
+
+.container-blur {
+    width: 40%;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    border-radius: 4px;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    /*background-color: white;*/
+    /*opacity: 0.5;*/
+    backdrop-filter: blur(3px);
+    background: rgba(255, 255, 255, .1);
+    color: #F2F2F2;
+}
+
+h1,h2 {
+    color:#F2F2F2;
+}
+
+h1 {
+    font-size: 52px;
+    margin-bottom: 15px;
+    letter-spacing: -2px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+form p{
+    padding-top: 1%;
+    font-size: 20px;
+    color:#F2F2F2;
+    text-align: left;
+    padding-left: 5%;
+
+}
+
+
+a {
+    color: #F2F2F2;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+main {
+    padding: 20px;
+    color:#F2F2F2;
+    flex: 1;
+}
+
+header {
+    vertical-align: center;
+    backdrop-filter: blur(3px);
+    background: rgba(255, 255, 255, .1);
+    height: 6%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+header a {
+    padding: 5%;
+    text-decoration: none;
+}
+
+#form1 {
+    padding-top: 9px;
+}
+
+footer {
+    vertical-align: middle; /* почему не работает */
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    backdrop-filter: blur(3px);
+    background: rgba(255, 255, 255, .1);
+    height: 6%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+
+#inputField {
+  opacity: 0;
+  transition: opacity .7s ease;
+}
+
+#inputField.visible {
+  display: block;
+  opacity: 1;
+
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
+.login {
+    align-items: normal;
+}
+
+.button {
+  background-color: #03403A;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 6px;
+  padding: 0.5em 1em;
+  width: 200px;
+  box-shadow: inset 0 0 0 3px transparent;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.button:hover{
+    background: rgba(0,0,0,0);
+	color: #84BF04;
+	box-shadow: inset 0 0 0 3px #84BF04;
+}
+
+input {
+    border-radius: 15px;
+    transition: border-radius 0.5s ease-in-out;
+
+
+}
+input:hover {
+    /*background-color: #03403A;*/
+    /*transition: 1s;*/
+}
+
+/*#name:invalid{*/
+/*    background: burlywood;*/
+/*}*/
+/*#phone:invalid{*/
+/*    background: burlywood;*/
+/*}*/
+
+.submit {
+  border-radius: 10px;
+  color: #03403A;
+  transition: .2s linear;
+  background: #F2F2F2;
+}
+
+.submit:hover {
+  box-shadow: 0 0 0 2px white, 0 0 0 4px #F2F2F2;
+}
+
+td {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+
+.anim {
+    text-align: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+

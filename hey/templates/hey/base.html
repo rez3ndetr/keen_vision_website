@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all">
+</head>
+
+<body>
+<div class="anim">
+    {% include 'include/header.html' %}
+    {% block content %}
+
+    {% endblock %}
+    {% include 'include/footer.html' %}
+</div>
+
+</body>
+
+    <script src="/static/js/p5.min.js"></script>
+    <script src="/static/js/vanta.topology.min.js"></script>
+    <script src="/static/js/app.js"></script>
+</html>

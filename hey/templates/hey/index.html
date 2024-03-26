@@ -1,0 +1,24 @@
+{% extends 'hey/base.html' %}
+{% load static %}
+{% block content %}
+        <main>
+            <h1 style="padding-top: 5%">Keen Vision</h1>
+            <h3>Нейросеть, контролирующая показатели и ускоряющая выручку</h3>
+            <div style="padding-top: 5%"></div>
+            <div class="container-blur" id="c1" style="width: 260px; height: 60px; padding-top: 5px" >
+                <button class="button" id="showInputButton">Оставить заявку</button>
+                </div>
+                    <div id="inputField">
+                        <div class="container-blur" style="width: 600px; height: 50px">
+                        <form enctype="multipart/form-data" method="POST" autocomplete="on" action="{% url 'index' %}" id="form1">
+                            {% csrf_token %}
+                            <input required type="text" placeholder="Как к вам обращаться?" id="name" name = "name" class="input-text">
+                            <input required type="tel" placeholder="+7(921)123-45-67" id="phone" name="phone" class="input-text">
+                            <input type="submit" value="Оставить заявку" class="submit">
+    <!--                        {{ form.errors }}-->
+                        </form>
+                    </div>
+                </div>
+        </main>
+{% endblock %}
+

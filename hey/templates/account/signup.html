@@ -1,0 +1,37 @@
+{% extends "account/base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Signup" %}{% endblock %}
+
+{% block content %}
+  <h2 style="padding-top: 10%">{% trans "Регистрация" %}</h2>
+<div class="container-blur" >
+
+  <span>{% blocktrans %}Уже зарегистрированы? Можете <a href="{{ login_url }}">войти</a>.{% endblocktrans %}</span>
+
+  <form enctype="multipart/form-data" autocomplete="on" style="padding-top: 5%;" id="signup_form" method="POST" action="{% url 'account_signup' %}">
+    {% csrf_token %}
+      <p>
+      <label for="id_username"></label>
+      <input type="text" name="username" placeholder="Username" autocomplete="username" minlength="1" maxlength="150" required id="id_username">
+    </p>
+    <p>
+      <label for="id_email"></label>
+      <input type="email" name="email" placeholder="Email address" autocomplete="email" required id="id_email">
+    </p>
+    <p>
+      <label for="id_password1"></label>
+      <input type="password" name="password1" placeholder="Password" autocomplete="new-password" required id="id_password1">
+        <span class="helptext"></span>
+    </p>
+    <p>
+      <label for="id_password2"></label>
+      <input type="password" name="password2" placeholder="Password (again)" autocomplete="new-password" required id="id_password2">
+    {% if redirect_field_value %}
+    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+    {% endif %}
+    <div class="button_signup"><button type="submit" class="button"  >{% trans "Зарегистрироваться" %}</button></div>
+  </form>
+</div>
+{% endblock %}

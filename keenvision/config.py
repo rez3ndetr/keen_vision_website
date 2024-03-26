@@ -1,0 +1,1 @@
+KEY = 'django-insecure-3@d(3_ei7eq3d9#6cu*#edxgy$a4a!l044^hm$zhu3(yr_twig'

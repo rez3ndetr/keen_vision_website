@@ -1,0 +1,10 @@
+<header >
+    <a href="">какая то ссылка пустая в хедере</a>
+    {% if user.is_authenticated %}
+    <a href="{% url 'account_logout' %}">Выход</a>
+    {% else %}
+        <a href="{% url 'account_login' %}">Вход</a>
+        <a href="{% url 'account_signup' %}">Регистрация</a>
+    {% endif %}
+    <a href="">какая то ссылка пустая в хедере</a>
+</header>
